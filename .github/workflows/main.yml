@@ -6,7 +6,7 @@ jobs:
   build:
     uses: ./.github/workflows/build.yml
     with:
-      my_var: abc123
+      token: ${{ secrets.MY_SEC }}
 
   release:
     needs: build
