@@ -9,6 +9,7 @@ on:
       token:
         description: 'A required token from secrets'
         required: true
+        type: string
 #      skip-dev:
 #        description: 'Skip dev'
 #        required: false
