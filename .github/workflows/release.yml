@@ -32,9 +32,7 @@ jobs:
       #concurrency: 2
       matrix:
         project:
-          - siag
-          - ocs
-          - traefik1
-          - traefik2
+          - icap
+          - sanbox
     steps:
       - run: hostname || true
