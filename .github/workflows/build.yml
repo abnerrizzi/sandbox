@@ -2,7 +2,7 @@ name: Build
 on:
   workflow_call:
     inputs:
-      project_name:
+      my_var:
         description: 'My VAR'
         required: false
         type: string
