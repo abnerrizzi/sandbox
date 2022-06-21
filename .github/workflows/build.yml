@@ -1,11 +1,11 @@
 name: Build
 on:
   workflow_call:
-#    inputs:
-#      project_name:
-#        description: 'Porject name (required)'
-#        required: true
-#        type: string
+    inputs:
+      project_name:
+        description: 'My VAR'
+        required: false
+        type: string
 #      skip-dev:
 #        description: 'Skip dev'
 #        required: false
