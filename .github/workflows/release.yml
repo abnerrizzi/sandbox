@@ -36,6 +36,8 @@ jobs:
       #concurrency: 2
       matrix:
         project:
-          - icap
+          - dev
           - sanbox
-    uses: ./.github/workflows/"${{ matrix.project }}".yml
+    steps:
+      - run: hostname || true
+      - run: echo "secret ${{ secrets.token }}"
