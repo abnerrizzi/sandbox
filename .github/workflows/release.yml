@@ -38,5 +38,5 @@ jobs:
           - sanbox
     steps:
       - run: hostname || true
-      - run: echo "secret ${{ secret.my_token }}
-      - run: echo "secret ${{ secret.MY_SEC }}
+      - run: echo "secret ${{ secrets.my_token }}
+      - run: echo "secret ${{ secrets.MY_SEC }}
