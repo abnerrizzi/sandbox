@@ -38,4 +38,4 @@ jobs:
         project:
           - icap
           - sanbox
-    uses: ./.github/workflows/${{ matrix.project }}.yml
+    uses: ./.github/workflows/"${{ matrix.project }}".yml
