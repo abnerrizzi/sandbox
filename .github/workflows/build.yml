@@ -6,10 +6,10 @@ on:
         description: 'My VAR'
         required: false
         type: string
+    secrets: 
       token:
         description: 'A required token from secrets'
         required: true
-        type: string
 #      skip-dev:
 #        description: 'Skip dev'
 #        required: false
@@ -25,3 +25,4 @@ jobs:
       - run: echo 'Building.....'
       - run: echo 'after script if master'
       - run: echo $my_var
+      - run: echo $token
