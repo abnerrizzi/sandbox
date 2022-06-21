@@ -25,8 +25,7 @@ jobs:
     - run: set
     - run: echo $GITHUB_ENV
     - run: echo $GITHUB_ENV
-    - run: echo "${{ secrets.MY_SEC }}"
-    - run: echo "${{ secrets.my_token }}"
+    - run: echo "${{ secrets.token }}"
 
   jobs:
     name: ${{ matrix.project }} Project
@@ -39,6 +38,4 @@ jobs:
         project:
           - icap
           - sanbox
-    steps:
-      - run: hostname || true
-      - run: echo "secret ${{ secrets.token }}"
+    uses: ./.github/workflows/${{ matrix.project }}.yml
