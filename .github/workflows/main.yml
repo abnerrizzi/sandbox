@@ -2,6 +2,9 @@ name: Main workflow
 
 on: [push]
 
+env:
+  main1: "main1"
+
 jobs:
   build:
     uses: ./.github/workflows/build.yml

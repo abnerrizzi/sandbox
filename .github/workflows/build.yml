@@ -10,11 +10,6 @@ on:
       token:
         description: 'A required token from secrets'
         required: true
-#      skip-dev:
-#        description: 'Skip dev'
-#        required: false
-#        default: true
-#        type: string
 
 jobs:
   build:
@@ -26,3 +21,5 @@ jobs:
       - run: echo 'after script if master'
       - run: echo $my_var
       - run: echo $token
+      - run: echo $main1
+      - run: echo ${{ secrets.token }}
