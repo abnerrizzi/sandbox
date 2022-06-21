@@ -1,4 +1,4 @@
-name: Main workflow (dev2)
+name: Main workflow 
 
 on: [push]
 
@@ -18,4 +18,3 @@ jobs:
     uses: ./.github/workflows/release.yml
     secrets:
       token: "${{ secrets.MY_SEC }}"
-
