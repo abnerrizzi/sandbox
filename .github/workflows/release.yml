@@ -1,8 +1,10 @@
 name: Release
 on:
   workflow_call:
-    secrets: 
+    secrets:
       my_token:
+        description: 'Generic description'
+        required: true
 
 env:
   DOCKER_BUILDKIT: 1
