@@ -1,6 +1,8 @@
 name: Release
 on:
   workflow_call:
+    secrets: 
+      my_token:
 
 env:
   DOCKER_BUILDKIT: 1
@@ -21,7 +23,7 @@ jobs:
     - run: echo $GITHUB_ENV
     - run: echo $GITHUB_ENV
     - run: echo "${{ secrets.MY_SEC }}"
-    - run: echo "${{ secrets.token }}"
+    - run: echo "${{ secrets.my_token }}"
 
   jobs:
     name: ${{ matrix.project }} Project
@@ -36,3 +38,5 @@ jobs:
           - sanbox
     steps:
       - run: hostname || true
+      - run: echo "secret ${{ secret.my_token }}
+      - run: echo "secret ${{ secret.MY_SEC }}

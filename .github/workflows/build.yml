@@ -15,11 +15,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Cache........'
-      - run: echo 'Checkout.....'
-      - run: echo 'Building.....'
-      - run: echo 'after script if master'
-      - run: echo $my_var
-      - run: echo $token
-      - run: echo $main1
       - run: echo ${{ secrets.token }}
+      - run: echo ${{ inputs.my_var }}
