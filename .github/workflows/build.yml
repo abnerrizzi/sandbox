@@ -6,6 +6,9 @@ on:
         description: 'My VAR'
         required: false
         type: string
+      token:
+        description: 'A required token from secrets'
+        required: true
 #      skip-dev:
 #        description: 'Skip dev'
 #        required: false
