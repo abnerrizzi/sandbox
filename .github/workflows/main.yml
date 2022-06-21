@@ -5,7 +5,6 @@ on: [push]
 env:
   main1: "main1"
 
-
 jobs:
   build:
     uses: ./.github/workflows/build.yml
@@ -18,4 +17,4 @@ jobs:
     needs: build
     uses: ./.github/workflows/release.yml
     secrets:
-      my_token: "${{ secrets.MY_SEC }}"
+      token: "${{ secrets.MY_SEC }}"

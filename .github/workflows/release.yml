@@ -2,7 +2,7 @@ name: Release
 on:
   workflow_call:
     secrets:
-      my_token:
+      token:
         description: 'Generic description'
         required: true
 
