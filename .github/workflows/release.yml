@@ -20,8 +20,11 @@ jobs:
     - run: set
     - run: echo $GITHUB_ENV
     - run: echo $GITHUB_ENV
+    - run: echo "${{ secrets.MY_SEC }}"
+    - run: echo "${{ secrets.token }}"
 
   jobs:
+    name: ${{ matrix.project }} Project
     needs: matrix
     runs-on: ubuntu-latest
     strategy:
@@ -33,6 +36,5 @@ jobs:
           - ocs
           - traefik1
           - traefik2
-    name: ${{ matrix.project }} Project
     steps:
       - run: hostname || true
