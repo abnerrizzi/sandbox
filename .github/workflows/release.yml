@@ -26,15 +26,33 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      concurrency: 2
       matrix:
         project:
-          - siag: name
+          - siag
           - ocs
           - traefik1
           - traefik2
-
-    name: ${{ matrix.project }}/${{ matrix.project.siag.name }} | ${{ matrix.imgs }}
+          - traefik21
+          - traefik22
+          - traefik23
+          - traefik24
+          - traefik25
+          - traefik26
+          - traefik27
+          - traefik28
+          - traefik29
+          - traefik20
+          - traefik31
+          - traefik32
+          - traefik33
+          - traefik34
+          - traefik35
+          - traefik36
+          - traefik37
+          - traefik38
+          - traefik39
+          - traefik30
+    name: ${{ matrix.project }} Project
     steps:
-
-    - name: 🚧 Build, test and release
-      run: echo ./utils/build-test-release
+      - run: hostname || true
